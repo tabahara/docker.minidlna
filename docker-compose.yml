@@ -1,0 +1,12 @@
+
+minidlna1:
+ build: .
+ volumes_from:
+  - minidlna.music:rw
+ ports:
+  - 8200:8200
+  - 1900:1900/udp
+ tty: true
+ stdin_open: true
+ net: "host"
+
