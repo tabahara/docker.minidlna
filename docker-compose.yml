@@ -1,5 +1,10 @@
+minidlna.music:
+ image: debian
+ volumes:
+   - /home/storage/music:/var/lib/minidlna/music
+ entrypoint: /bin/true
 
-minidlna1:
+minidlna:
  build: .
  volumes_from:
   - minidlna.music:rw

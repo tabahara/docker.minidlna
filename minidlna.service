@@ -1,0 +1,10 @@
+[Unit]
+Description=minidlna container
+Requires=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker start -a minidlna_minidlna_1
+ExecStop=/usr/bin/docker stop -t 2 minidlna_minidlna_1
+
+[Install]
+WantedBy=multi-user.target
